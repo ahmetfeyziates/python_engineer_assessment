@@ -66,7 +66,7 @@ Fork the git repo to your own Github account and complete the following tasks:
 
 * Write code to peform at least two types of the cleaning.
 
-**Proper functions have been written to apply the first two cleanings on the data.**
+**Proper functions have been written to apply the first two cleanings mentioned above on the data.**
 
 * Write unit tests to show the data cleaning functions work as expected.
 
