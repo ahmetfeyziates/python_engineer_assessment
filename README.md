@@ -58,11 +58,11 @@ Fork the git repo to your own Github account and complete the following tasks:
 
 **1. Standardize the capitalization of the interests.**
 
-**2. Delete the interests where the data is missing.**
+**2. Leading and trailing spaces should be eliminated from the strings representing interests.**
 
 **3. Phone Number should be normalized into standart international canonical form, without any character in between** 
 
-**4. Leading and trailing spaces should be eliminated from the strings representing interests.**
+**4. Delete the interests where the data is missing.**
 
 * Write code to peform at least two types of the cleaning.
 
@@ -89,6 +89,8 @@ Fork the git repo to your own Github account and complete the following tasks:
 * Write code to load the data from the CSV into the database.
 
 **Function named "store_csv_into_db" reads the csv and stores the data there in without any cleaning.**
+
+**This function should be called once after container creation**
 
 4. Create a function that uses the database tables to return the following stats of the people data:
 * The minimum, maximum, and average age
