@@ -53,17 +53,52 @@ Fork the git repo to your own Github account and complete the following tasks:
 * Store the raw data in the `/data` directory.
 * Convert the CSV to JSON format and store in the `/data` directory.
 2. Inspect the data and list ways that the data can be cleaned up before being stored for a data science team to use.
+
+**Following types of cleanings can be applied to the downloaded data.**
+**1. Standardize the capitalization of the interests.**
+**2. Delete the interests where the data is missing.**
+**3. Phone Number should be normalized into standart international canonical form, without any character in between** 
+**4. Leading and trailing spaces should be eliminated from the strings representing interests.**
+
 * Write code to peform at least two types of the cleaning.
+**Proper functions have been written to apply the first two cleanings on the data.**
+
 * Write unit tests to show the data cleaning functions work as expected.
+**Unit tests have been written using pytest, and stored under directory named "tests".**
+**Unit tests can be run via issuing the following commands from terminal:**
+
+    % cd tests
+    % pytest
+
 * Write a function to filter people who have no interests.
+
+**Function named "filter_out_boring_people" have been written for this purpose.**
+
 3. Design a database schema to hold the data for the people in the CSV.
 * Store the schema file in the `mysql-schemas` directory. These will be applied when the database container is created.
+**Designed Database table has been defined in mysql-schemas/test.sql**
+
 * Write code to load the data from the CSV into the database.
+
+**Function named "store_csv_into_db" reads the csv and stores the data there in without any cleaning.**
+
 4. Create a function that uses the database tables to return the following stats of the people data:
 * The minimum, maximum, and average age
 * The city with the most people
 * The top 5 most common interests
+
+**Funation named "return_stats()" returns the above requested statistics.**
+
 5. Create an API that serves an endpoint to return the data in Task 4.
 
+**The function created at step 4 above have been specified as the API endpoint via Flask Framework.**
+**The endpoint can be launched with:**
+
+    % cd assessments
+    % flask --debug  --app=run.py run
+
+And the endpint can be reached by issuing following GET request towards the declared endpoint:
+
+    http://localhost:5000/stats/
 
 Share a link to the cloned github repo with the completed tasks so we can review your code ahead of your interview.
